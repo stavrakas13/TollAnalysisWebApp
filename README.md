@@ -1,30 +1,30 @@
-This is a WebApp for Toll Passages Management and Analysis that i worked with Dimitris Thivaios, Dimitris Liakis and Vassilis Anastasiadis as part of Software Engineering Course in ECE NTUA.
+**Toll Passages Management and Analysis WebApp**
 
-**Features:**
+This web application was developed as part of the Software Engineering course at ECE NTUA by Stavros, Dimitris Thivaios, Dimitris Liakis, and Vassilis Anastasiadis.
+**Features**
 
--Map of Greece with all Toll Stations (Leaflet.js)
+    Map of Greece with all Toll Stations (using Leaflet.js)
+    Predictions of passing car flows using Machine Learning models
+    Statistics for all tolling companies
+    Debt Optimization between companies created by cross e-pass usage
+    CLI-client for Admin Management
 
--Predictions of passing car's flow with Machine Learning
+**Software Development Stack**
 
--Statistics for all companies
+    Backend: Node.js / Express (REST API)
+    Frontend: React.js
+    Database: MySQL
+    Machine Learning: scikit-learn
+    Testing: Jest
 
--Optimizing debts between companies that are created by cross e-pass usage
+**Documentation**
 
--CLI-client for Admin-Management
+    UML Diagrams
+    Open API Specifications
 
-**Software Development Stack:**
--MYSQL Database
--Nodejs/Express Backend REST API
--React.js Frontend
--scikit-learn ML Framework
--Testing with Jest
+Disclaimer: This project was created for educational purposes only and is not intended for commercial use.
+My Contributions
 
-**Documentation:**
-
--UML
--Open API
-
-Disclaimer:
-Created for educational, not commercial, purposes.
-
-My main focus in this project was the creation at the areas of REST API Backend and API Functional Testing.
+As part of this project, my main focus was on:
+    Developing the REST API backend using Node.js and Express.
+    Conducting API functional testing to ensure proper functionality of the backend.
