@@ -2,8 +2,11 @@ This is a WebApp for Toll Passages Management and Analysis that i worked with Di
 
 Features:
 -Map of Greece with all Toll Stations (Leaflet.js)
+
 -Predictions of passing car's flow with Machine Learning
+
 -Statistics for all companies
+
 -Optimizing debts between companies that are created by cross e-pass usage
 
 Software Development Stack:
