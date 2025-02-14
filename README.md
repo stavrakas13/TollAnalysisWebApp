@@ -10,6 +10,8 @@ This is a WebApp for Toll Passages Management and Analysis that i worked with Di
 
 -Optimizing debts between companies that are created by cross e-pass usage
 
+-CLI-client for Admin-Management
+
 **Software Development Stack:**
 -MYSQL Database
 -Nodejs/Express Backend API
@@ -20,3 +22,6 @@ This is a WebApp for Toll Passages Management and Analysis that i worked with Di
 
 -UML
 -Open API
+
+Disclaimer:
+Created for educational, not commercial, purposes.
