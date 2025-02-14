@@ -28,3 +28,5 @@ My Contributions
 As part of this project, my main focus was on:
     Developing the REST API backend using Node.js and Express.
     Conducting API functional testing to ensure proper functionality of the backend.
+    ![image](https://github.com/user-attachments/assets/c5e794c9-9a4a-4c72-90e3-2c867d41a4e3)
+
