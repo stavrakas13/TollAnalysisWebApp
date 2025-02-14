@@ -14,9 +14,10 @@ This is a WebApp for Toll Passages Management and Analysis that i worked with Di
 
 **Software Development Stack:**
 -MYSQL Database
--Nodejs/Express Backend API
+-Nodejs/Express Backend REST API
 -React.js Frontend
 -scikit-learn ML Framework
+-Testing with Jest
 
 **Documentation:**
 
@@ -25,3 +26,5 @@ This is a WebApp for Toll Passages Management and Analysis that i worked with Di
 
 Disclaimer:
 Created for educational, not commercial, purposes.
+
+My main focus in this project was the creation at the areas of REST API Backend and API Functional Testing.
