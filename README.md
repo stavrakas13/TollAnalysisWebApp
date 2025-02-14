@@ -1,7 +1,13 @@
-# SoftEng-template
+This is a WebApp for Toll Passages Management and Analysis that i worked with Dimitris Thivaios, Dimitris Liakis and Vassilis Anastasiadis as part of Software Engineering Course in ECE NTUA.
 
-Template repository, used for NTUA/ECE Software Engineering, 2024-2025
+Features:
+-Map of Greece with all Toll Stations (Leaflet.js)
+-Predictions of passing car's flow with Machine Learning
+-Statistics for all companies
+-Optimizing debts between companies that are created by cross e-pass usage
 
-Το αρχείο αυτό περιέχει οδηγίες για το στήσιμο του git repository που θα
-χρησιμοποιήσετε.  Στο τέλος, θα το αντικαταστήσετε με το `README.md` που
-θα περιγράφει το δικό σας project.
+Software Development Stack:
+-MYSQL Database
+-Nodejs/Express Backend API
+-React.js Frontend
+-scikit-learn ML Framework
