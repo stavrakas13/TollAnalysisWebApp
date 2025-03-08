@@ -1,6 +1,6 @@
 **Toll Passages Management and Analysis WebApp**
 
-This web application was developed as part of the Software Engineering course at ECE NTUA by Stavros, Dimitris Thivaios, Dimitris Liakis, and Vassilis Anastasiadis.
+This web application was developed as part of the Software Engineering course at ECE NTUA by me, Dimitris Thivaios, Dimitris Liakis, and Vassilis Anastasiadis.
 **Features**
 
     Map of Greece with all Toll Stations (using Leaflet.js)
