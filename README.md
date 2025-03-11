@@ -29,7 +29,7 @@ My Contributions
 
 As part of this project, my main focus was on:
 
-    Designing DB, developing REST API backend using Node.js and Express.
+   Developing REST API backend using Node.js and Express,  designing DB, contributing in documentation.
     Conducting API functional testing to ensure proper functionality of the backend.
    ![image](https://github.com/user-attachments/assets/ffa85471-cacc-44a6-8ac8-006ad04db8a7)
 
