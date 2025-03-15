@@ -30,14 +30,14 @@ function Map() {
   const navigate = useNavigate();
 
   const operatorTranslations = {
-    aegeanmotorway: "Αυτοκινητόδρομος Αιγαίου",
-    egnatia: "Εγνατία Οδός",
-    gefyra: "Γέφυρα",
-    kentrikiodos: "Κεντρική Οδός",
-    moreas: "Μορέας",
-    naodos: "Αττική Οδός",
-    neaodos: "Νέα Οδός",
-    olympiaodos: "Ολυμπία Οδός",
+    aegeanmotorway: "Aegean Motorway",
+    egnatia: "Egnatia Road",
+    gefyra: "Bridge",
+    kentrikiodos: "Central Road",
+    moreas: "Moreas",
+    naodos: "Attiki Odos",
+    neaodos: "New Road",
+    olympiaodos: "Olympia Road",
   };
 
   const customIcon = L.icon({
@@ -75,29 +75,27 @@ function Map() {
   useEffect(() => {
     const fetchTolls = async () => {
       try {
-       
-
         const response = await axios.get("http://localhost:9115/api/tolls", {
         });
 
         if (response.status === 200) {
           setTolls(response.data);
         } else if (response.status === 204) {
-          setError("Δεν επιστράφηκαν δεδομένα");
+          setError("No data returned");
         }
       } catch (err) {
         if (err.response) {
           switch (err.response.status) {
-            case 400: setError("Άκυρο αίτημα"); break;
-            case 401:  setError("Ανεπαρκή δικαιώματα πρόσβασης"); break;
-            case 404: setError("Δεν βρέθηκε ο πόρος"); break;
-            case 500: setError("Σφάλμα διακομιστή"); break;
-            default: setError(err.response.data?.error || "Σφάλμα");
+            case 400: setError("Invalid request"); break;
+            case 401:  setError("Insufficient access rights"); break;
+            case 404: setError("Resource not found"); break;
+            case 500: setError("Server error"); break;
+            default: setError(err.response.data?.error || "Error");
           }
         } else if (err.request) {
-          setError("Δεν ήταν δυνατή η σύνδεση");
+          setError("Connection failed");
         } else {
-          setError("Σφάλμα αιτήματος");
+          setError("Request error");
         }
       } finally {
         setLoading(false);
@@ -130,7 +128,7 @@ function Map() {
               <strong>Email:</strong> <a href="mailto:${toll.email}">${toll.email}</a><br/>
               <strong>Prices:</strong><br/>
               ${toll.prices.map((price, index) => 
-                `Κατηγορία ${index + 1}: ${parseFloat(price).toFixed(2)}€<br/>`
+                `Category ${index + 1}: ${parseFloat(price).toFixed(2)}€<br/>`
               ).join("")}
             </div>`,
             { closeButton: false, className: "custom-popup" }
@@ -164,7 +162,7 @@ function Map() {
       <div className="filters-container">
         <div className="filter-group">
           <label className="filter-label">
-            Εταιρεία:
+            Company:
             <select
               name="operator"
               value={filters.operator}
@@ -173,7 +171,7 @@ function Map() {
             >
               {["all", ...Object.keys(operatorTranslations)].map(operator => (
                 <option key={operator} value={operator.toLowerCase()}>
-                  {operator === "all" ? "Όλες" : operatorTranslations[operator]}
+                  {operator === "all" ? "All" : operatorTranslations[operator]}
                 </option>
               ))}
             </select>
@@ -182,20 +180,20 @@ function Map() {
 
         <div className="filter-group">
           <label className="filter-label">
-            Όνομα Διοδίου:
+            Toll Name:
             <input
               type="text"
               name="name"
               value={filters.name}
               onChange={handleFilterChange}
-              placeholder="Αναζήτηση..."
+              placeholder="Search..."
               className="filter-input"
             />
           </label>
         </div>
       </div>
 
-      {loading && <p className="loading-message">Φόρτωση δεδομένων διοδίων...</p>}
+      {loading && <p className="loading-message">Loading toll data...</p>}
       {error && <p className="error-message">{error}</p>}
 
       <div id="map" className="map-container"></div>
