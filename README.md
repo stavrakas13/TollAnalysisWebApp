@@ -30,10 +30,10 @@ This web application was developed as part of the Software Engineering course at
 
 **Database (NECESSARY ACTIONS)**
 
-    In order to fullfill your MYSQL DB, you need to go to /uploads directory
-    run --> python3 passages2mysql.py passes14.csv.
+-In order to fullfill your MYSQL DB, you need to go to /uploads directory
+run --> python3 passages2mysql.py passes14.csv.
 
-    In order to create the schema and the deault data that you need add to your database the .sql files schema.sql and data.sql.
+-In order to create the schema and the deault data that you need add to your database the .sql files schema.sql and data.sql from Database_mysql dir.
 
 **HOW TO LOGIN** 
 
