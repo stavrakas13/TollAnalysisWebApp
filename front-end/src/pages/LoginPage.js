@@ -13,21 +13,21 @@ function LoginPage({ setIsLoggedIn }) {
   // Helper function for client-side validation
   const validateForm = () => {
     if (!email) {
-      toast.error("Παρακαλώ εισάγετε το email σας.");
+      toast.error("Please enter your email.");
       return false;
     }
     // Simple email regex for validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      toast.error("Παρακαλώ εισάγετε ένα έγκυρο email.");
+      toast.error("Please enter a valid email.");
       return false;
     }
     if (!password) {
-      toast.error("Παρακαλώ εισάγετε τον κωδικό σας.");
+      toast.error("Please enter your password.");
       return false;
     }
     if (password.length < 6) {
-      toast.error("Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες.");
+      toast.error("Password must be at least 6 characters long.");
       return false;
     }
     return true;
@@ -61,34 +61,34 @@ function LoginPage({ setIsLoggedIn }) {
         // Update the parent state (if you’re using a parent App component)
         setIsLoggedIn(true);
 
-        toast.success("Σύνδεση επιτυχής!");
+        toast.success("Login successful!");
         // Redirect to a protected page (e.g., home/dashboard)
         navigate("/");
       } else {
         // Handle specific server-side errors
         switch (response.status) {
           case 400:
-            toast.error(data.error || "Άκυρο αίτημα. Παρακαλώ δοκιμάστε ξανά.");
+            toast.error(data.error || "Invalid request. Please try again.");
             break;
           case 401:
-            toast.error(data.error || "Μη εξουσιοδοτημένη πρόσβαση. Ελέγξτε τα διαπιστευτήριά σας.");
+            toast.error(data.error || "Unauthorized access. Check your credentials.");
             break;
           case 403:
-            toast.error(data.error || "Δεν έχετε δικαίωμα πρόσβασης σε αυτό το τμήμα.");
+            toast.error(data.error || "You do not have permission to access this section.");
             break;
           case 404:
-            toast.error(data.error || "Ο χρήστης δεν βρέθηκε.");
+            toast.error(data.error || "User not found.");
             break;
           case 500:
-            toast.error(data.error || "Σφάλμα διακομιστή. Παρακαλώ δοκιμάστε αργότερα.");
+            toast.error(data.error || "Server error. Please try again later.");
             break;
           default:
-            toast.error(data.error || "Σφάλμα κατά τη διαδικασία σύνδεσης.");
+            toast.error(data.error || "An error occurred during login.");
         }
       }
     } catch (error) {
       console.error("Login error:", error);
-      toast.error("Παρουσιάστηκε σφάλμα κατά τη σύνδεση. Παρακαλώ προσπαθήστε ξανά.");
+      toast.error("An error occurred while logging in. Please try again.");
     } finally {
       setLoading(false); // End loading
     }
@@ -96,7 +96,7 @@ function LoginPage({ setIsLoggedIn }) {
 
   return (
     <div className="login-page">
-      <h2>Καλώς ήρθατε στην Υπηρεσία TollAnalysis</h2>
+      <h2>Welcome to the TollAnalysis Service</h2>
       <form onSubmit={handleLogin} className="login-form">
         <div className="input-group">
           <input
@@ -112,7 +112,7 @@ function LoginPage({ setIsLoggedIn }) {
         <div className="input-group">
           <input
             type="password"
-            placeholder="Κωδικός"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -121,7 +121,7 @@ function LoginPage({ setIsLoggedIn }) {
         </div>
 
         <button type="submit" className="login-button" disabled={loading}>
-          {loading ? "Σύνδεση..." : "Σύνδεση"}
+          {loading ? "Logging in..." : "Login"}
         </button>
       </form>
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar />
