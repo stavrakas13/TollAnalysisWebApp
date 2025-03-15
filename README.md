@@ -46,3 +46,5 @@ As part of this project, my main focus was on:
    ![image](https://github.com/user-attachments/assets/ffa85471-cacc-44a6-8ac8-006ad04db8a7)
 
 
+Give us a star if you liked the project!
+
