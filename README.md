@@ -28,9 +28,12 @@ This web application was developed as part of the Software Engineering course at
 
     You need the depedencies to run it properly. For cli-client you need to npm link. For front-end npm start, for back-end node server.js to run it.
 
-**Database**
+**Database (NECESSARY ACTIONS)**
 
-    In order to fullfill your MYSQL DB, you need to go to /uploads directory and run --> python3 passages2mysql.py passes14.csv.
+    In order to fullfill your MYSQL DB, you need to go to /uploads directory
+    run --> python3 passages2mysql.py passes14.csv.
+
+    In order to create the schema and the deault data that you need add to your database the .sql files schema.sql and data.sql.
 
 Disclaimer: This project was created for educational purposes only and is not intended for commercial use.
 
