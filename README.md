@@ -35,6 +35,10 @@ This web application was developed as part of the Software Engineering course at
 
     In order to create the schema and the deault data that you need add to your database the .sql files schema.sql and data.sql.
 
+**HOW TO LOGIN** 
+
+- First set up your database. Then go to /hashPassword.js and find the admin's user name and password. Then you can have access to all the features of the app.
+
 Disclaimer: This project was created for educational purposes only and is not intended for commercial use.
 
 My Contributions
