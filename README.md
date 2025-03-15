@@ -23,6 +23,15 @@ This web application was developed as part of the Software Engineering course at
     UML Diagrams
     Open API Specifications
 
+
+**Depedencies**
+
+    You need the depedencies to run it properly. For cli-client you need to npm link. For front-end npm start, for back-end node server.js to run it.
+
+**Database**
+
+    In order to fullfill your MYSQL DB, you need to go to /uploads directory and run --> python3 passages2mysql.py passes14.csv.
+
 Disclaimer: This project was created for educational purposes only and is not intended for commercial use.
 
 My Contributions
