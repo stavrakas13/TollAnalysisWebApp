@@ -37,7 +37,7 @@ run --> python3 passages2mysql.py passes14.csv.
 
 **HOW TO LOGIN** 
 
-- First set up your database. Then go to /hashPassword.js and find the admin's user name and password. Then you can have access to all the features of the app.
+- First set up your database. Then go to back-end/hashPassword.js and find the admin's user name and password. Then you can have access to all the features of the app.
 
 Disclaimer: This project was created for educational purposes only and is not intended for commercial use.
 
