@@ -128,7 +128,7 @@ As part of this project, my main focus was on:
 ![image](https://github.com/user-attachments/assets/ffa85471-cacc-44a6-8ac8-006ad04db8a7)
 
 Other contributors:
-- Dimitris Thivaios, Dimitris Liakis, Vassilis Anastasiadis: Frontend, ML, CLI, documentation
+- Dimitris Thivaios, Dimitris Liakis, Vassilis Anastasiadis
 
 ---
 
