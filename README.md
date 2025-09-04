@@ -82,14 +82,12 @@ se2414 --help
 To use the application, you must log in as either an **admin** or a company user.
 
 - **Admin Login:**
-  - **Username:** `admin`
-  - **Password:** `freepasses4all`
+  - **Username:** `admin@yme.gov.gr`
+  - **Password:** `yme123!`
   - These credentials are set by default in the database and can be found in `back-end/hashPassword.js` and are initialized/reset via the backend admin endpoints.
 
 - **Company Users:**
   - Usernames and passwords for company users are managed by the admin via the CLI or backend endpoints.
-  - Example company users (see `/cli-client/README.md` for details):
-    - `aegean_user` / `egnatia_user` / `kentriki_user` / `moreas_user` / `attiki_user` / `nea_user` / `olympia_user`
   - Each company user can only access their own company's data.
 
 - You can log in via the web interface or CLI. If you need to create or reset users, use the admin endpoints or CLI commands.
